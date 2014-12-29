@@ -1,0 +1,4 @@
+bitreserve
+==========
+
+Bitreserve Ruby SDK
