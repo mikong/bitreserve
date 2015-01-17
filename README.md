@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    require 'bitreserve'
+    api = Bitreserve::Client.new
+
+    # All Tickers
+    api.ticker
+
+    # Tickers for currency
+    api.ticker(currency: :usd)
 
 ## Contributing
 
