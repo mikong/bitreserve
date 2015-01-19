@@ -25,11 +25,17 @@ Or install it yourself as:
     require 'bitreserve'
     api = Bitreserve::Client.new
 
+    # Currencies
+    Bitreserve.currencies
+
     # All Tickers
     api.ticker
 
     # Tickers for currency
     api.ticker(currency: :usd)
+
+    # Transparency
+    api.reserve_status
 
 ## Contributing
 

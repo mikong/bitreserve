@@ -21,7 +21,17 @@ module Bitreserve
       currency = options.delete(:currency)
       currency_path = CURRENCIES[currency.to_sym]  unless currency.nil?
 
-      response = connection.get "/#{@version_path}/ticker/#{currency_path}"
+      get("/ticker/#{currency_path}")
+    end
+
+    def reserve_status
+      get("/reserve/statistics")
+    end
+
+  private
+
+    def get(path)
+      response = connection.get "/#{@version_path}" + path
       MultiJson.load(response.body)
     end
 
